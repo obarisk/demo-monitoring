@@ -2,20 +2,29 @@
 
 """
 -s sensor_id -c connection_string -i interval seconds (must > 1)
+
+on windown
+pip install psycopg[binary]
 """
 
 import os
 import subprocess
 import sys
 import time
+import platform
 import psycopg
 
 cmd_temphum   = os.path.dirname(os.path.abspath(__file__)) + "/../../simulator/temphum.py"
+if platform.system() == "Windows":
+    cmd_temphum = ["python", cmd_temphum]
+else:
+    cmd_temphum = [cmd_temphum]
 conn_string   = sys.argv[4]
 push_interval = int(sys.argv[6])
 
 def capture():
-    output = subprocess.run([cmd_temphum], capture_output=True)
+    global cmd_temphum
+    output = subprocess.run(cmd_temphum, capture_output=True)
     return output.stdout.decode().strip()
 
 def parser(txt):
