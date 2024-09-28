@@ -1,0 +1,16 @@
+[
+  {"labels": {"loc": "taipei",  "factory": "a", "l": "機台1"}, "targets": ["pyexporter:8081"]},
+  {"labels": {"loc": "taipei",  "factory": "a", "l": "機台2"}, "targets": ["pyexporter:8082"]},
+  {"labels": {"loc": "taipei",  "factory": "a", "l": "機台3"}, "targets": ["pyexporter:8083"]},
+  {"labels": {"loc": "taipei",  "factory": "b", "l": "機台1"}, "targets": ["pyexporter:8084"]},
+  {"labels": {"loc": "taipei",  "factory": "b", "l": "機台2"}, "targets": ["pyexporter:8085"]},
+  {"labels": {"loc": "taipei",  "factory": "b", "l": "機台3"}, "targets": ["pyexporter:8086"]},
+  {"labels": {"loc": "taipei",  "factory": "b", "l": "機台4"}, "targets": ["pyexporter:8087"]},
+  {"labels": {"loc": "keelung", "factory": "c", "l": "機台1"}, "targets": ["pyexporter:8088"]},
+  {"labels": {"loc": "keelung", "factory": "c", "l": "機台2"}, "targets": ["pyexporter:8089"]},
+  {"labels": {"loc": "keelung", "factory": "c", "l": "機台3"}, "targets": ["pyexporter:8090"]},
+  {"labels": {"loc": "keelung", "factory": "d", "l": "機台1"}, "targets": ["pyexporter:8091"]},
+  {"labels": {"loc": "keelung", "factory": "d", "l": "機台2"}, "targets": ["pyexporter:8092"]},
+  {"labels": {"loc": "keelung", "factory": "d", "l": "機台3"}, "targets": ["pyexporter:8093"]},
+  {"labels": {"loc": "keelung", "factory": "d", "l": "機台4"}, "targets": ["pyexporter:8094"]}
+]

@@ -1,0 +1,17 @@
+global:
+  scrape_interval: 1m
+  evaluation_interval: 1m
+  scrape_timeout: 10s
+
+alerting:
+  alertmanagers:
+    - static_configs:
+      - targets:
+
+rule_files:
+
+scrape_configs:
+  - job_name: sensor
+    file_sd_configs:
+      - files:
+        - "/targets/sensors.json"
