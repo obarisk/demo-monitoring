@@ -6,6 +6,7 @@ services:
     volumes:
       - ./postgres-initdb.d/init.sql:/docker-entrypoint-initdb.d/init.sql
       - ./postgres-initdb.d/push.sql:/docker-entrypoint-initdb.d/push.sql
+      - postgres-data:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: password
     ports:
@@ -24,6 +25,8 @@ services:
     environment:
       PGADMIN_DEFAULT_EMAIL: "admin@demo.io"
       PGADMIN_DEFAULT_PASSWORD: "password"
+    volumes:
+      - pgadmin4-data:/var/lib/pgadmin
   metabase:
     image: docker.io/metabase/metabase
     restart: always
@@ -42,3 +45,7 @@ services:
   alpine:
     image: docker.io/library/alpine
     tty: true
+
+volumes:
+  postgres-data: {}
+  pgadmin4-data: {}
