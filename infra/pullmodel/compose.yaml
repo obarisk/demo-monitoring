@@ -2,6 +2,7 @@ services:
   prometheus:
     image: prom/prometheus:latest
     container_name: prometheus
+    restart: always
     volumes:
       - ./prometheus/:/etc/prometheus/
       - ./targets/:/targets/
@@ -19,6 +20,7 @@ services:
   grafana:
     image: grafana/grafana:latest
     container_name: grafana
+    restart: always
     volumes:
       - grafana_data:/var/lib/grafana
     depends_on:
@@ -30,6 +32,7 @@ services:
     build:
       context: exporter
     container_name: pyexporter
+    restart: always
     volumes:
       - ../../adapter/pull/exporter.py:/app/exporter.py
       - ./misc/exporters.sh:/app/exporters.sh
